@@ -5,6 +5,8 @@ import ListadosGastos from './components/ListadosGastos'
 import Modal from './components/Modal'
 import { generarID } from './Helpers'
 import IconoNuevoGasto from './img/nuevo-gasto.svg'
+import { Helmet } from 'react-helmet'
+
 
 
 
@@ -113,7 +115,14 @@ function App() {
   }
 
   return (
+    
     <div className={modal ? 'fijar': ''}>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Control de Gasto</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+                <meta name="description" content="Helmet application" />
+      </Helmet>
       <Header
         gastos={gastos}
         setGastos={setGastos}
